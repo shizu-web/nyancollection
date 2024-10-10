@@ -33,13 +33,19 @@
                 <li><a href="#"><img src="images/sns_btn_ig.png" alt="Instagram"></a></li>
             </ul>
         </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
 
-
+<main>
 <!-- /.title -->
         <div class="features_container">
             <h2 class="features_title">にゃんコレが選ばれる理由</h2>
         </div>
+</main>
 
 <!-- /.features -->
     <div class="features_section">
@@ -82,7 +88,14 @@
             <p class="copyright"><small>&copy; 2024 ️NEKO LIFE.inc All Right Reserved</small></p>
         </footer>
 
+        <script>
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mainNav = document.querySelector('.main-nav');
 
+            mobileMenu.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        </script>
     </body>
 
 </html>
