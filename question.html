@@ -25,21 +25,28 @@
   <header class="page-header wrapper">
       <h1><a href="index.html"><img class="logo" src="images/logo2.svg" alt="にゃんコレクションホーム"></a></h1>
       <nav>
-          <ul class="main-nav">
-              <li><a href="course.html">にゃんコレ <br>NYANCOLLECTION</a></li>
-              <li><a href="features.html">選ばれる理由<br>FEATURES</a></li>
-              <li><a href="question.html">よくある質問<br>Q&A</a></li>
-              <li><a href="contact.html">お問い合わせ<br>CONTACT</a></li>
-              <li><a href="#"><img src="images/sns_btn_x.png" alt="X"></a></li>
-              <li><a href="#"><img src="images/sns_btn_ig.png" alt="Instagram"></a></li>
-          </ul>
-      </nav>
+        <ul class="main-nav">
+            <li><a href="course.html">にゃんコレ <br>NYANCOLLECTION</a></li>
+            <li><a href="features.html">選ばれる理由<br>FEATURES</a></li>
+            <li><a href="question.html">よくある質問<br>Q&A</a></li>
+            <li><a href="contact.html">お問い合わせ<br>CONTACT</a></li>
+            <li><a href="#"><img src="images/sns_btn_x.png" alt="X"></a></li>
+            <li><a href="#"><img src="images/sns_btn_ig.png" alt="Instagram"></a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle" id="mobile-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
   </header>
 
+<main>
 <!-- /.title -->
         <div class="question_container">
             <h2 class="question_title">よくある質問</h2>
         </div>
+</main>
 
 <!-- /.features -->
 <div class="question_section">
@@ -128,7 +135,14 @@
             <p class="copyright"><small>&copy; 2024 ️NEKO LIFE.inc All Right Reserved</small></p>
         </footer>
 
+        <script>
+          const mobileMenu = document.getElementById('mobile-menu');
+          const mainNav = document.querySelector('.main-nav');
 
+          mobileMenu.addEventListener('click', () => {
+              mainNav.classList.toggle('active');
+          });
+      </script>
     </body>
 
 </html>
