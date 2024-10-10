@@ -24,24 +24,30 @@
     <header class="page-header wrapper">
         <h1><a href="index.html"><img class="logo" src="images/logo2.svg" alt="にゃんコレクションホーム"></a></h1>
         <nav>
-            <ul class="main-nav">
-                <li><a href="course.html">にゃんコレ <br>NYANCOLLECTION</a></li>
-                <li><a href="features.html">選ばれる理由<br>FEATURES</a></li>
-                <li><a href="question.html">よくある質問<br>Q&A</a></li>
-                <li><a href="contact.html">お問い合わせ<br>CONTACT</a></li>
-                <li><a href="#"><img src="images/sns_btn_x.png" alt="X"></a></li>
-                <li><a href="#"><img src="images/sns_btn_ig.png" alt="Instagram"></a></li>
-            </ul>
-        </nav>
+          <ul class="main-nav">
+              <li><a href="course.html">にゃんコレ <br>NYANCOLLECTION</a></li>
+              <li><a href="features.html">選ばれる理由<br>FEATURES</a></li>
+              <li><a href="question.html">よくある質問<br>Q&A</a></li>
+              <li><a href="contact.html">お問い合わせ<br>CONTACT</a></li>
+              <li><a href="#"><img src="images/sns_btn_x.png" alt="X"></a></li>
+              <li><a href="#"><img src="images/sns_btn_ig.png" alt="Instagram"></a></li>
+          </ul>
+      </nav>
+      <div class="menu-toggle" id="mobile-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+      </div>
     </header>
 
 
 
-
+<main>
 <!-- /.title -->
         <div class="course_container">
             <h2 class="course_title">にゃんコレラインナップ</h2>
         </div>
+</main>
 
 <!-- /.course -->
     <div class="course_section">
@@ -51,7 +57,7 @@
             </div>
             </div>
             <div class="o_text">
-                <h3>おためしコース　¥1,080</h3>
+                <h3 id="otameshi">おためしコース　¥1,080</h3>
                 <div class="table-wrapper">
                     <table class="table_box">
                         <tr>
@@ -88,7 +94,7 @@
             <div class="tanoshimi"><img src="images/tanoshimi.png" alt="おたのしみコース">
             </div>
             <div class="o_text">
-                <h3>おたのしみコース　¥2,980</h3>
+                <h3 id="tanoshimi">おたのしみコース　¥2,980</h3>
                 <div class="table-wrapper">
                     <table class="table_box">
                         <tr>
@@ -125,7 +131,7 @@
             <div class="mankitsu"><img src="images/mankitsu.png" alt="まんきつコース">
             </div>
             <div class="o_text">
-                <h3>まんきつコース　¥3,150</h3>
+                <h3 id="mankitsu">まんきつコース　¥3,150</h3>
                 <div class="table-wrapper">
                     <table class="table_box">
                         <tr>
@@ -161,7 +167,7 @@
             <div class="manzoku"><img src="images/manzoku.png" alt="だいまんぞくコース">
             </div>
             <div class="o_text">
-                <h3>だいまんぞくコース　¥3,980</h3>
+                <h3 id="manzoku">だいまんぞくコース　¥3,980</h3>
                 <div class="table-wrapper">
                     <table class="table_box">
                         <tr>
@@ -207,7 +213,14 @@
             <p class="copyright"><small>&copy; 2024 ️NEKO LIFE.inc All Right Reserved</small></p>
         </footer>
 
+        <script>
+          const mobileMenu = document.getElementById('mobile-menu');
+          const mainNav = document.querySelector('.main-nav');
 
+          mobileMenu.addEventListener('click', () => {
+              mainNav.classList.toggle('active');
+          });
+      </script>
     </body>
 
 </html>
