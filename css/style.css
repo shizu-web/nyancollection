@@ -1196,6 +1196,16 @@ html {
   width: 100%;
   }
 
+.voice_box {
+  width: 300px;
+  margin-left: calc(50% - 150px);
+  margin-bottom: 25px;
+}
+
+.voices h2 {
+  margin-bottom: 25px;
+}
+
 /* スライダー時のスタイル */
   .voice-slider .voice {
       display: block;
