@@ -258,6 +258,7 @@ footer {
     margin: 0;
     color: #F57060;
     margin-bottom: 25px;
+    letter-spacing: 5px;
 }
 
 .text p {
@@ -362,6 +363,7 @@ a.btn_04 .small-text {
     font-size: 24px;
     color: #F57060;
     padding-top: 45px;
+    letter-spacing: 5px;
 }
 
 .voices h3 {
@@ -612,38 +614,45 @@ a.btn_04 .small-text {
 }
 
 /* ポイント ----------------------------------*/
-.features_box {
-    height: 550px;
-    background-image: url(../images/bg4.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
+.features_box_pc {
+  height: 550px;
+  background-image: url(../images/bg4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
 }
 
-.point {
-    display: flex;
-    align-items: center;
+.point_pc {
+  display: flex;
+  align-items: center;
 }
 
-.f_text {
-    width: 50%;
-    text-align: left;
-    margin-left: 100px;
+.f_text_pc {
+  width: 50%;
+  text-align: left;
+  margin-left: 100px;
 }
 
-.f_text h3 {
-    font-size: 24px;
-    margin: 0;
-    color: #F57060;
-    letter-spacing: 5px;
+.f_text_pc h3 {
+  font-size: 24px;
+  margin: 0;
+  color: #F57060;
+  letter-spacing: 5px;
 }
 
-.features_img {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+.features_img_pc {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
+
+@media screen and (min-width: 768px) {
+  .features_box_sp {
+      display: none;  /* パソコンでは非表示 */
+  }
+}
+
 
 /* よくある質問 -----------------------------------------*/
 .question_section {
@@ -1302,48 +1311,65 @@ a.btn_04 {
 }
 
 /* 選ばれる理由 ------------------------------------*/
-.features_box {
+.features_box_pc {
+  display: none;
+}
+
+.features_section {
+  display: none;
+}
+
+.features_section_sp {
+  margin-bottom: 50px;
+}
+
+.features_box_sp {
   display: flex;
   flex-direction: column;
   height: auto;
   background-image: url(../images/sp_bg5.png);
   background-repeat: no-repeat;
-  margin-top: 50px;
+  background-position: center;
+  padding: 90px 0;
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
 }
 
-.features_section {
-  margin-top: 50px;
-}
-.f_text {
-  width: 80%;
-  text-align: center;
-  margin-left: 0;
+.f_text_sp {
   margin-bottom: 20px;
 }
 
-.f_text h3 {
+.f_text_sp h3 {
   font-size: 20px;
   letter-spacing: 3px;
   margin-bottom: 10px;
 }
 
-.features_img {
+.features_img_sp {
   width: 100%;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  order: 2;
 }
 
-.point {
+.point_sp {
   flex-direction: column;
+  order: 1;
 }
 
-.point img {
+.point_sp img {
   width: 80px;
-  margin-top: 50px;
 }
 
-.features_img img {
+.features_img_sp img {
   width: 60%;
+}
+
+.p_sp {
+  width: 80%;
+  margin: 0 auto;
+  order: 3;
 }
 
 /* フッター */
